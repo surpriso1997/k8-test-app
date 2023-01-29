@@ -1,0 +1,37 @@
+@host=http://localhost:3000
+
+### create report 
+
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make":"chevy",
+    "model":"mustang",
+    "year":1980,
+    "mileage":10000,
+    "lng":27.81,
+    "lat":87.21,
+    "price":10000
+
+}
+
+#### get all reports 
+
+GET http://localhost:3000/reports
+Content-Type: application/json
+
+
+### update approval 
+
+PATCH http://localhost:3000/reports/2
+Content-Type: application/json
+
+{
+    "approved":true
+}
+
+
+
+### get estimate for existing vehicle 
+GET  http://localhost:3000/reports/estimate?make=ford&model=mustang&mileage=20000&lat=28.1&lng=87.1&year=2022

@@ -1,0 +1,51 @@
+### create user
+
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email":"admin@admin.com",
+    "password":"meow",
+    "asdf":"lol"
+}
+### sign in 
+
+POST  http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{ 
+    "email":"admin@admin.com",
+    "password":"meow"
+}
+
+
+### current user
+POST  http://localhost:3000/auth/currentuser
+
+
+
+### sign out 
+POST http://localhost:3000/auth/signout
+
+###  find all
+GET http://localhost:3000/auth/
+
+
+
+
+### find  by email 
+GET http://localhost:3000/auth?email=aa@bb.com
+ 
+### delete user
+
+DELETE http://localhost:3000/auth/1
+
+  
+### update user
+
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "email":"meow@meow.com"
+}
